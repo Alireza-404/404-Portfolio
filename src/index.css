@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #c8f36a;
+  --color-text: #f3f5ef;
+  --color-secondary-text: #929a92;
+}
