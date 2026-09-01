@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "work": "Work",
+        "about": "About",
+        "skills": "Skills",
+        "contact": "Contact"
+    },
+    "common": {
+        "menu": "MENU",
+        "letsTalk": "Let's talk",
+        "language": "LANGUAGE"
+    },
+    "brand": {
+        "title": "WEB / FRONTEND"
+    },
+    "availability": "Available for work"
+}

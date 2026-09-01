@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "work": "Projekte",
+        "about": "Über mich",
+        "skills": "Skills",
+        "contact": "Kontakt"
+    },
+    "common": {
+        "menu": "MENÜ",
+        "letsTalk": "Lass uns sprechen",
+        "language": "SPRACHE"
+    },
+    "brand": {
+        "title": "WEB / FRONTEND"
+    },
+    "availability": "Verfügbar für neue Projekte"
+}

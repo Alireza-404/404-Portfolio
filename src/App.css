@@ -1,3 +1,7 @@
 body {
   font-family: "Space Grotesk", Verdana, sans-serif;
 }
+
+[dir="rtl"] body {
+  font-family: "Noto Sans Arabic", sans-serif;
+}
