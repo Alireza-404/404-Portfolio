@@ -8,10 +8,34 @@
     "common": {
         "menu": "MENU",
         "letsTalk": "Let's talk",
-        "language": "LANGUAGE"
+        "language": "LANGUAGE",
+        "frontendDeveloper": "FRONTEND DEVELOPER",
+        "viewMyWork": "View my work"
     },
     "brand": {
         "title": "WEB / FRONTEND"
     },
-    "availability": "Available for work"
+    "availability": "Available for work",
+    "hero": {
+        "beforeTypeWriter": "I build digital",
+        "afterTypeWriter": "that feel effortless.",
+        "typeWriter": {
+            "text1": "experiences",
+            "text2": "websites",
+            "text3": "products"
+        },
+        "description": "I turn ideas into clean, thoughtful and high-performance interfaces — combining solid frontend engineering with a strong eye for visual detail.",
+        "stats": {
+            "yearsCoding": "Years Coding",
+            "projects": "Projects",
+            "curiosity": "Curiosity"
+        },
+        "rightSide": {
+            "interestingProjects": "Open to interesting projects"
+        },
+        "build": {
+            "title": "WHAT I BUILD",
+            "subtitle": "Modern interfaces for the web"
+        }
+    }
 }

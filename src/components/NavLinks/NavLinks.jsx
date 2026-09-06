@@ -21,15 +21,11 @@ export default function NavLinks() {
         <li key={link.id}>
           <Link
             to={link.to}
-            className={`relative text-secondary text-base md:text-lg tracking-wider hover:text-foreground
+            className="relative text-secondary text-base md:text-lg tracking-wider hover:text-foreground
             after:absolute after:w-[125%] after:bg-foreground
             after:h-px after:left-1/2 after:-translate-x-1/2
             after:scale-x-0 hover:after:scale-x-100 after:transition-transform
-            after:duration-200 transition-colors duration-200 ${
-              i18n.language.startsWith("fa")
-                ? "after:-bottom-2"
-                : "after:-bottom-1"
-            }`}
+            after:duration-200 transition-colors duration-200 after:-bottom-1"
           >
             {t(link.text)}
           </Link>

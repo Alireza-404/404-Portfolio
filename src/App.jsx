@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 
 import "./App.css";
 
@@ -17,11 +18,11 @@ function App() {
     <div className="w-full min-h-screen overflow-x-hidden bg-[#0b0e0c]">
       <Header />
 
-      <main></main>
+      <main>
+        <Hero />
+      </main>
     </div>
   );
 }
 
 export default App;
-
-// 01+ Years Coding

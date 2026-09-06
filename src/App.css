@@ -2,6 +2,51 @@ body {
   font-family: "Space Grotesk", Verdana, sans-serif;
 }
 
+::selection {
+  background: #c8f36a;
+  color: #0b0e0c;
+}
+
+::-moz-selection {
+  background: #c8f36a;
+  color: #0b0e0c;
+}
+
 [dir="rtl"] body {
   font-family: "Noto Sans Arabic", sans-serif;
+}
+
+.hero-cursor {
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+.grid-layer {
+  background-image: linear-gradient(to right, #525252, transparent 1px),
+    linear-gradient(to bottom, #525252, transparent 1px);
+  background-size: 45px 45px;
+  opacity: 0.2;
+  animation: gridLayer 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gridLayer {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -45px;
+  }
 }

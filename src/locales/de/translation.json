@@ -8,10 +8,34 @@
     "common": {
         "menu": "MENÜ",
         "letsTalk": "Lass uns sprechen",
-        "language": "SPRACHE"
+        "language": "SPRACHE",
+        "frontendDeveloper": "FRONTEND DEVELOPER",
+        "viewMyWork": "Meine Projekte ansehen"
     },
     "brand": {
         "title": "WEB / FRONTEND"
     },
-    "availability": "Verfügbar für neue Projekte"
+    "availability": "Verfügbar für neue Projekte",
+    "hero": {
+        "beforeTypeWriter": "Ich entwickle digitale",
+        "afterTypeWriter": "die sich mühelos anfühlen.",
+        "typeWriter": {
+            "text1": "Erlebnisse",
+            "text2": "Websites",
+            "text3": "Produkte"
+        },
+        "description": "Ich verwandle Ideen in klare, durchdachte und leistungsstarke Benutzeroberflächen – und verbinde solides Frontend-Engineering mit einem ausgeprägten Gespür für visuelle Details.",
+        "stats": {
+            "yearsCoding": "Jahre Programmiererfahrung",
+            "projects": "Projekte",
+            "curiosity": "Neugier"
+        },
+        "rightSide": {
+            "interestingProjects": "Offen für spannende Projekte"
+        },
+        "build": {
+            "title": "WAS ICH ENTWICKLE",
+            "subtitle": "Moderne Benutzeroberflächen für das Web"
+        }
+    }
 }

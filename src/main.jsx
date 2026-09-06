@@ -9,7 +9,6 @@ import i18n from "i18next";
 
 import translationEN from "./locales/en/translation.json";
 import translationDE from "./locales/de/translation.json";
-import translationFA from "./locales/fa/translation.json";
 
 import "./index.css";
 
@@ -23,9 +22,6 @@ i18n
       },
       de: {
         translation: translationDE,
-      },
-      fa: {
-        translation: translationFA,
       },
     },
     fallbackLng: "en",

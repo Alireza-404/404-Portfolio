@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 
 const languages = [
-  { code: "fa", label: "FA" },
   { code: "en", label: "EN" },
   { code: "de", label: "DE" },
 ];
