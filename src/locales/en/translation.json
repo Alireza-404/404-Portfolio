@@ -48,5 +48,28 @@
         "project": {
             "viewLive": "View Live"
         }
+    },
+    "about": {
+        "header": {
+            "label": "ABOUT",
+            "title": "Frontend Developer",
+            "description": "I enjoy turning ideas into clean, responsive interfaces where thoughtful design and solid engineering work together."
+        },
+        "content": {
+            "beforeClarity": "I build modern web interfaces with a strong focus on",
+            "clarity": "clarity",
+            "performance": "performance",
+            "and": "and",
+            "details": "details",
+            "afterDetails": "I'm interested in creating products that feel effortless to use—not because they're simple, but because every decision has a purpose.",
+            "modernFrontend": "Modern Frontend"
+        },
+        "visual": {
+            "create": "CREATE",
+            "designCode": "Design × Code",
+            "title": "From concept to polished interface.",
+            "responsive": "Responsive by default",
+            "detailsMatter": "Details matter"
+        }
     }
 }

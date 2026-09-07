@@ -48,5 +48,28 @@
         "project": {
             "viewLive": "Live ansehen"
         }
+    },
+    "about": {
+        "header": {
+            "label": "ÜBER MICH",
+            "title": "Frontend Developer",
+            "description": "Ich entwickle Ideen zu klaren, responsiven Benutzeroberflächen, in denen durchdachtes Design und solides Engineering zusammenkommen."
+        },
+        "content": {
+            "beforeClarity": "Ich entwickle moderne Weboberflächen mit einem klaren Fokus auf",
+            "clarity": "Klarheit",
+            "performance": "Performance",
+            "and": "und",
+            "details": "Details",
+            "afterDetails": "Mich interessiert es, Produkte zu entwickeln, die sich mühelos bedienen lassen – nicht weil sie einfach sind, sondern weil jede Entscheidung einen klaren Zweck erfüllt.",
+            "modernFrontend": "Modern Frontend"
+        },
+        "visual": {
+            "create": "CREATE",
+            "designCode": "Design × Code",
+            "title": "Vom Konzept zur ausgereiften Benutzeroberfläche.",
+            "responsive": "Standardmäßig responsiv",
+            "detailsMatter": "Details machen den Unterschied"
+        }
     }
 }

@@ -24,7 +24,6 @@ const worklistArray = [
       "i18next",
       "Responsive Design",
       "Dark Mode",
-      "E-Commerce",
     ],
     liveUrl: "#",
   },

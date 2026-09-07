@@ -6,6 +6,7 @@ import Hero from "./components/Hero/Hero";
 
 import "./App.css";
 import SelectedWork from "./components/SelectedWork/SelectedWork";
+import About from "./components/About/About";
 
 function App() {
   const { i18n } = useTranslation();
@@ -21,6 +22,8 @@ function App() {
 
       <main>
         <Hero />
+
+        <About />
 
         <SelectedWork />
       </main>
