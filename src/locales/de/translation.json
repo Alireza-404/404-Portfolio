@@ -37,5 +37,16 @@
             "title": "WAS ICH ENTWICKLE",
             "subtitle": "Moderne Benutzeroberflächen für das Web"
         }
+    },
+    "work": {
+        "header": {
+            "label": "AUSGEWÄHLTE PROJEKTE",
+            "title": "Entwickelt mit",
+            "titleAccent": "Anspruch.",
+            "description": "Eine Auswahl an Projekten, in denen durchdachtes Design, Frontend-Engineering und Liebe zum Detail zusammenkommen."
+        },
+        "project": {
+            "viewLive": "Live ansehen"
+        }
     }
 }

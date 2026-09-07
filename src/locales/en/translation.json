@@ -37,5 +37,16 @@
             "title": "WHAT I BUILD",
             "subtitle": "Modern interfaces for the web"
         }
+    },
+    "work": {
+        "header": {
+            "label": "SELECTED WORK",
+            "title": "Built with",
+            "titleAccent": "intent.",
+            "description": "A few projects where thoughtful design, frontend engineering and attention to detail come together."
+        },
+        "project": {
+            "viewLive": "View Live"
+        }
     }
 }

@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 
 import "./App.css";
+import SelectedWork from "./components/SelectedWork/SelectedWork";
 
 function App() {
   const { i18n } = useTranslation();
@@ -20,6 +21,8 @@ function App() {
 
       <main>
         <Hero />
+
+        <SelectedWork />
       </main>
     </div>
   );

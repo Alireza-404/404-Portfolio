@@ -13,8 +13,8 @@ export default function Hero() {
         <RightSide />
 
         <div
-          className="w-111 h-111 rounded-full bg-primary/5 absolute top-10 -right-20
-          blur-3xl"
+          className="w-111 h-111 rounded-full bg-primary/2 absolute top-10 -right-20
+          blur-3xl z-0"
         ></div>
       </div>
     </section>

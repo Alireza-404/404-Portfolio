@@ -21,7 +21,7 @@ export default function LeftSide() {
   const codingYears = `${String(Math.max(1, years)).padStart(2, "0")}+`;
 
   return (
-    <div className="flex flex-col gap-y-8">
+    <div className="flex flex-col gap-y-8 relative z-10">
       <span className="text-secondary tracking-widest flex items-center gap-x-2.5">
         <span className="w-9 h-px bg-primary inline-block"></span>
         {t("common.frontendDeveloper")}

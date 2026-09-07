@@ -4,7 +4,7 @@ export default function RightSide() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="relative h-fit xl:w-fit xl:mx-auto" dir="ltr">
+    <div className="relative z-10 h-fit xl:w-fit xl:mx-auto" dir="ltr">
       <div
         className={`w-[87%] xl:w-160 mx-auto rounded-3xl border border-white/10 overflow-hidden
           h-82 lg:h-150
@@ -15,7 +15,7 @@ export default function RightSide() {
 
       <div
         className="absolute -bottom-2.5 -left-1 flex items-center gap-x-2.5 bg-[#111511] w-fit px-4 py-3
-        rounded-full border border-white/10 z-10"
+        rounded-full border border-white/10 z-20"
       >
         <span className="w-2 h-2 rounded-full bg-primary"></span>
 
@@ -25,7 +25,7 @@ export default function RightSide() {
       </div>
 
       <div
-        className="absolute w-36 lg:w-auto -right-3 lg:right-12 -bottom-4 lg:bottom-5 -rotate-3 bg-primary
+        className="absolute w-36 md:w-52 lg:w-auto -right-3 lg:right-12 -bottom-4 lg:bottom-5 -rotate-3 bg-primary
         rounded-2xl flex flex-col gap-y-2 p-5 z-10"
       >
         <span className="font-medium lg:text-2xl">{t("hero.build.title")}</span>
@@ -96,7 +96,7 @@ export default function RightSide() {
               <div className="h-2 w-[90%] rounded-full bg-secondary/20"></div>
             </div>
 
-            <div className="h-7 w-[50%] rounded-lg bg-primary"></div>
+            <div className="h-7 w-[50%] rounded-lg bg-primary lg:block hidden"></div>
           </div>
         </div>
       </div>
