@@ -56,7 +56,8 @@ export default function WorkList() {
                 {work.tags.map((tag, i) => (
                   <li
                     key={i}
-                    className="text-xs text-secondary px-3 py-1.5 rounded-full border border-white/10"
+                    className="text-xs text-secondary px-3 py-1.5 rounded-full border border-white/10
+                    hover:text-primary transition-colors duration-200 cursor-default"
                   >
                     {tag}
                   </li>
