@@ -25,7 +25,7 @@ const worklistArray = [
       "Responsive Design",
       "Dark Mode",
     ],
-    liveUrl: "#",
+    liveUrl: "https://blue-berry-404.vercel.app/",
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ const worklistArray = [
       "Animations",
       "Motion Design",
     ],
-    liveUrl: "#",
+    liveUrl: "https://signal-guard-website-z404z.vercel.app/",
   },
 ];
 
