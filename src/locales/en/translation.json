@@ -71,5 +71,18 @@
             "responsive": "Responsive by default",
             "detailsMatter": "Details matter"
         }
+    },
+    "moreProjects": {
+        "header": {
+            "label": "MORE PROJECTS",
+            "title": "More things",
+            "titleAccent": "I've built.",
+            "description": "A few more experiments, interfaces and side projects I've built along the way."
+        },
+        "footer": {
+            "title": "Explore all my work",
+            "description": "More experiments, repositories & open-source work",
+            "viewGithub": "View GitHub"
+        }
     }
 }

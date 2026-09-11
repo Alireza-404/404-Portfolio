@@ -3,10 +3,11 @@ import { useTranslation } from "react-i18next";
 
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import SelectedWork from "./components/SelectedWork/SelectedWork";
+import MoreProjects from "./components/MoreProjects/MoreProjects";
 
 import "./App.css";
-import SelectedWork from "./components/SelectedWork/SelectedWork";
-import About from "./components/About/About";
 
 function App() {
   const { i18n } = useTranslation();
@@ -26,6 +27,8 @@ function App() {
         <About />
 
         <SelectedWork />
+
+        <MoreProjects />
       </main>
     </div>
   );

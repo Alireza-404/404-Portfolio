@@ -71,5 +71,18 @@
             "responsive": "Standardmäßig responsiv",
             "detailsMatter": "Details machen den Unterschied"
         }
+    },
+    "moreProjects": {
+        "header": {
+            "label": "WEITERE PROJEKTE",
+            "title": "Weitere Dinge,",
+            "titleAccent": "die ich entwickelt habe.",
+            "description": "Weitere Experimente, Benutzeroberflächen und Side Projects, die ich im Laufe der Zeit entwickelt habe."
+        },
+        "footer": {
+            "title": "Entdecke alle meine Projekte",
+            "description": "Weitere Experimente, Repositories und Open-Source-Projekte",
+            "viewGithub": "GitHub ansehen"
+        }
     }
 }

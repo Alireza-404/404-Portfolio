@@ -4,7 +4,7 @@ export default function WorkHeader() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-y-6">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end lg:gap-x-12 gap-y-6">
       <div className="flex flex-col gap-y-6">
         <span className="text-secondary tracking-widest flex items-center gap-x-2.5">
           <span className="w-9 h-px bg-primary inline-block"></span>
