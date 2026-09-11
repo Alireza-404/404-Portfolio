@@ -40,16 +40,16 @@ export default function RightSide() {
       >
         <span className="text-xs text-secondary flex items-center justify-between">
           component.jsx
-          <span className="w-2 h-2 rounded-full bg-primary inline-block"></span>
+          <span className="w-2 h-2 rounded-full bg-primary inline-block animate-pulse"></span>
         </span>
 
         <div className="flex flex-col gap-y-2.5 w-full">
-          <div className="h-2 w-[85%] rounded-full bg-secondary/20"></div>
-          <div className="h-2 w-[65%] rounded-full bg-primary/40"></div>
-          <div className="h-2 w-[70%] rounded-full bg-secondary/20"></div>
-          <div className="h-2 w-[80%] rounded-full bg-secondary/20"></div>
-          <div className="h-2 w-[40%] rounded-full bg-secondary/20"></div>
-          <div className="h-2 w-[60%] rounded-full bg-secondary/20"></div>
+          <div className="h-2 w-[85%] rounded-full bg-secondary/20 animate-pulse"></div>
+          <div className="h-2 w-[65%] rounded-full bg-primary/40 animate-pulse"></div>
+          <div className="h-2 w-[70%] rounded-full bg-secondary/20 animate-pulse"></div>
+          <div className="h-2 w-[80%] rounded-full bg-secondary/20 animate-pulse"></div>
+          <div className="h-2 w-[40%] rounded-full bg-secondary/20 animate-pulse"></div>
+          <div className="h-2 w-[60%] rounded-full bg-secondary/20 animate-pulse"></div>
         </div>
       </div>
 
@@ -76,27 +76,27 @@ export default function RightSide() {
             </div>
 
             <div className="flex flex-col gap-y-4">
-              <div className="h-2 w-[90%] rounded-full bg-primary/40"></div>
-              <div className="h-2 w-[70%] rounded-full bg-secondary/20"></div>
-              <div className="h-2 w-[70%] rounded-full bg-secondary/20"></div>
-              <div className="h-2 w-[70%] rounded-full bg-secondary/20"></div>
+              <div className="h-2 w-[90%] rounded-full bg-primary/40 animate-pulse"></div>
+              <div className="h-2 w-[70%] rounded-full bg-secondary/20 animate-pulse"></div>
+              <div className="h-2 w-[70%] rounded-full bg-secondary/20 animate-pulse"></div>
+              <div className="h-2 w-[70%] rounded-full bg-secondary/20 animate-pulse"></div>
             </div>
           </div>
 
           <div className="flex flex-col gap-y-6 px-4 py-7 md:py-10 col-span-2">
-            <div className="h-2 w-[30%] rounded-full bg-secondary/20"></div>
+            <div className="h-2 w-[30%] rounded-full bg-secondary/20 animate-pulse"></div>
 
             <div className="flex flex-col gap-y-3">
-              <div className="h-7 w-full rounded-lg bg-foreground"></div>
-              <div className="h-7 w-[50%] rounded-lg bg-foreground"></div>
+              <div className="h-7 w-full rounded-lg bg-foreground animate-pulse"></div>
+              <div className="h-7 w-[50%] rounded-lg bg-foreground animate-pulse"></div>
             </div>
 
             <div className="flex flex-col gap-y-3">
-              <div className="h-2 w-[60%] rounded-full bg-secondary/20"></div>
-              <div className="h-2 w-[90%] rounded-full bg-secondary/20"></div>
+              <div className="h-2 w-[60%] rounded-full bg-secondary/20 animate-pulse"></div>
+              <div className="h-2 w-[90%] rounded-full bg-secondary/20 animate-pulse"></div>
             </div>
 
-            <div className="h-7 w-[50%] rounded-lg bg-primary lg:block hidden"></div>
+            <div className="h-7 w-[50%] rounded-lg bg-primary lg:block hidden animate-pulse"></div>
           </div>
         </div>
       </div>

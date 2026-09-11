@@ -23,7 +23,7 @@ export default function MoreProjectsList() {
                   ? project.title_en
                   : project.title_de
               }
-              className="rounded-2xl"
+              className="rounded-2xl select-none"
             />
           </div>
 

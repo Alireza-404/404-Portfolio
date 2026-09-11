@@ -25,7 +25,7 @@ export default function WorkList() {
                 alt={
                   i18n.language.startsWith("en") ? work.title_en : work.title_de
                 }
-                className="relative z-10 w-full rounded-2xl object-cover"
+                className="relative z-10 w-full rounded-2xl object-cover select-none"
               />
 
               <div
