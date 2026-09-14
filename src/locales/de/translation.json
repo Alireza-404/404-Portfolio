@@ -84,5 +84,19 @@
             "description": "Weitere Experimente, Repositories und Open-Source-Projekte",
             "viewGithub": "GitHub ansehen"
         }
+    },
+    "howIBuild": {
+        "header": {
+            "label": "WIE ICH ENTWICKLE",
+            "title": "Guter Code ist nur",
+            "titleAccent": "die halbe Arbeit.",
+            "description": "Mich interessiert der Raum zwischen Design und Engineering – dort, wo durchdachte Benutzeroberflächen, saubere Architektur und Performance zusammenkommen."
+        },
+        "principle": {
+            "label": "PRINZIP",
+            "before": "Ich entwickle nicht nur",
+            "highlight": "Benutzeroberflächen",
+            "after": "Ich entwickle Erlebnisse, die Menschen gerne nutzen."
+        }
     }
 }

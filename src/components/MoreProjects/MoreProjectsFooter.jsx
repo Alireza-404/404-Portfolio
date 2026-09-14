@@ -9,7 +9,7 @@ export default function MoreProjectsFooter() {
     <Link
       to="https://github.com/Alireza-404"
       target="_blank"
-      className="group flex items-start gap-x-4 bg-[#111511] p-4 rounded-xl border border-white/10"
+      className="group flex items-start gap-x-4 bg-[#111511] p-4 rounded-2xl border border-white/10"
     >
       <span
         className="border border-primary/50 rounded-full w-9 h-9 text-primary

@@ -21,7 +21,8 @@ body {
 }
 
 .grid-layer {
-  background-image: linear-gradient(to right, #525252, transparent 1px),
+  background-image:
+    linear-gradient(to right, #525252, transparent 1px),
     linear-gradient(to bottom, #525252, transparent 1px);
   background-size: 45px 45px;
   opacity: 0.2;

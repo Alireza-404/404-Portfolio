@@ -8,6 +8,7 @@ import SelectedWork from "./components/SelectedWork/SelectedWork";
 import MoreProjects from "./components/MoreProjects/MoreProjects";
 
 import "./App.css";
+import HowIBuild from "./components/HowIBuild/HowIBuild";
 
 function App() {
   const { i18n } = useTranslation();
@@ -29,6 +30,8 @@ function App() {
         <SelectedWork />
 
         <MoreProjects />
+
+        <HowIBuild />
       </main>
     </div>
   );

@@ -84,5 +84,19 @@
             "description": "More experiments, repositories & open-source work",
             "viewGithub": "View GitHub"
         }
+    },
+    "howIBuild": {
+        "header": {
+            "label": "HOW I BUILD",
+            "title": "Good code is only the job.",
+            "titleAccent": "half",
+            "description": "I care about the space between design and engineering — where thoughtful interfaces, clean architecture and performance come together."
+        },
+        "principle": {
+            "label": "PRINCIPLE",
+            "before": "I don't just build",
+            "highlight": "interfaces",
+            "after": "I build experiences people enjoy using."
+        }
     }
 }
