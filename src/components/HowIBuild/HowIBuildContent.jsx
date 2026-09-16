@@ -12,7 +12,7 @@ export default function HowIBuildContent() {
         lg:col-span-1 lg:row-span-2"
       >
         <span className="text-xs text-neutral-600">
-          01 — {t("howIBuild.principle.label")}
+          {t("howIBuild.principle.label")}
         </span>
 
         <h3
@@ -28,7 +28,7 @@ export default function HowIBuildContent() {
 
         <div
           className="absolute w-1/3 h-1/3 md:w-70 md:h-50 lg:h-76 lg:w-76 rounded-full
-            bg-primary/5 top-2 left-4 blur-2xl z-0"
+            bg-primary/10 top-2 left-4 blur-2xl z-0"
         ></div>
 
         <div

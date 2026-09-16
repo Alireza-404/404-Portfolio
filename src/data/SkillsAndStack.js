@@ -1,0 +1,57 @@
+export const skillsAndStackArray = [
+  {
+    id: 1,
+    title: "Frontend",
+    skills: [
+      "HTML",
+      "CSS",
+      "Sass",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+    ],
+  },
+  {
+    id: 2,
+    title: "Styling & Motion",
+    skills: [
+      "Tailwind CSS",
+      "Bootstrap",
+      "Material UI",
+      "Flexbox",
+      "CSS Grid",
+      "Framer Motion",
+      "GSAP",
+      "AOS",
+      "Swiper",
+    ],
+  },
+  {
+    id: 3,
+    title: "Development",
+    skills: [
+      "Redux",
+      "Redux Toolkit",
+      "REST API",
+      "Supabase",
+      "GraphQL",
+      "Git",
+      "GitHub",
+    ],
+  },
+  {
+    id: 4,
+    title: "Workflow & Tools",
+    skills: [
+      "React Router",
+      "Formik",
+      "Yup",
+      "i18next",
+      "Vite",
+      "npm",
+      "Vercel",
+      "Responsive Design",
+    ],
+  },
+];

@@ -57,7 +57,8 @@ export default function WorkList() {
                   <li
                     key={i}
                     className="text-xs text-secondary px-3 py-1.5 rounded-full border border-white/10
-                    hover:text-primary transition-colors duration-200 cursor-default"
+                    hover:text-primary hover:border-primary/20 hover:bg-primary/5
+                    transition-colors duration-200 select-none"
                   >
                     {tag}
                   </li>

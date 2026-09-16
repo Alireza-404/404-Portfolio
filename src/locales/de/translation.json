@@ -97,5 +97,19 @@
             "highlight": "Benutzeroberflächen",
             "after": "Ich entwickle Erlebnisse, die Menschen gerne nutzen."
         }
+    },
+    "skillsStack": {
+        "header": {
+            "label": "SKILLS & STACK",
+            "title": "Tools, mit denen ich",
+            "titleAccent": "entwickle.",
+            "description": "Ein fokussiertes Toolkit für moderne Frontend-Entwicklung, skalierbare Architekturen und durchdachte Benutzererlebnisse."
+        },
+        "content": {
+            "toolkit": "TOOLKIT",
+            "coreExpertise": "KERNKOMPETENZEN",
+            "title": "Frontend verbindet Design und Logik.",
+            "description": "Mein Schwerpunkt liegt auf dem Frontend – von visuellen Ideen bis hin zu responsiven, barrierearmen und wartbaren Benutzeroberflächen."
+        }
     }
 }

@@ -4,7 +4,7 @@ export default function AboutContent() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-x-8 gap-y-8">
+    <div className="flex flex-col lg:flex-row gap-6">
       <div
         className="group lg:w-[60%] xl:w-1/2 p-6 border border-white/10 rounded-3xl bg-[#111511]
         flex flex-col lg:justify-around lg:gap-y-0 gap-y-10 hover:border-primary/30 transition-colors duration-200"

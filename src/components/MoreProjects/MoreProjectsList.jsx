@@ -9,7 +9,7 @@ export default function MoreProjectsList() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
       {moreProjectsArray.map((project) => (
-        <Tilt tiltMaxAngleX={9.5} tiltMaxAngleY={9.5}>
+        <Tilt key={project.id} tiltMaxAngleX={9.5} tiltMaxAngleY={9.5}>
           <Link
             key={project.id}
             to={project.liveUrl}
@@ -41,7 +41,8 @@ export default function MoreProjectsList() {
                   <li
                     key={i}
                     className="text-xs text-secondary px-3 py-1.5 rounded-full border border-white/10
-                    hover:text-primary transition-colors duration-200 cursor-default"
+                    hover:text-primary hover:border-primary/20 hover:bg-primary/5
+                    transition-colors duration-200 cursor-default select-none"
                   >
                     {tag}
                   </li>

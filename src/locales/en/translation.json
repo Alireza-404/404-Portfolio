@@ -97,5 +97,19 @@
             "highlight": "interfaces",
             "after": "I build experiences people enjoy using."
         }
+    },
+    "skillsStack": {
+        "header": {
+            "label": "SKILLS & STACK",
+            "title": "Tools I use to",
+            "titleAccent": "build.",
+            "description": "A focused toolkit built around modern frontend development, scalable architecture and thoughtful user experiences."
+        },
+        "content": {
+            "toolkit": "TOOLKIT",
+            "coreExpertise": "CORE EXPERTISE",
+            "title": "Frontend is where design meets logic.",
+            "description": "I work mostly on the frontend — turning visual ideas into responsive, accessible and maintainable interfaces."
+        }
     }
 }
