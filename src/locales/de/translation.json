@@ -88,8 +88,7 @@
     "howIBuild": {
         "header": {
             "label": "WIE ICH ENTWICKLE",
-            "title": "Guter Code ist nur",
-            "titleAccent": "die halbe Arbeit.",
+            "title": "Guter Code ist <1>die halbe Arbeit</1> nur",
             "description": "Mich interessiert der Raum zwischen Design und Engineering – dort, wo durchdachte Benutzeroberflächen, saubere Architektur und Performance zusammenkommen."
         },
         "principle": {

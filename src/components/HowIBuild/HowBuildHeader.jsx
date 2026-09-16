@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function HowIBuildHeader() {
   const { t } = useTranslation();
@@ -12,10 +12,10 @@ export default function HowIBuildHeader() {
         </span>
 
         <h2 className="text-foreground text-5xl lg:text-6xl font-bold max-w-[650px]">
-          {t("howIBuild.header.title")}{" "}
-          <span className="text-primary">
-            {t("howIBuild.header.titleAccent")}
-          </span>
+          <Trans
+            i18nKey={"howIBuild.header.title"}
+            components={{ 1: <span className="text-primary" /> }}
+          />
         </h2>
       </div>
 

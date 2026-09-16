@@ -12,6 +12,23 @@ body {
   color: #0b0e0c;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #111511;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #05070a00, #c8f36a39, #05070a00);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #05070a00, #c8f36a62, #05070a00);
+}
+
 [dir="rtl"] body {
   font-family: "Noto Sans Arabic", sans-serif;
 }
@@ -21,8 +38,7 @@ body {
 }
 
 .grid-layer {
-  background-image:
-    linear-gradient(to right, #525252, transparent 1px),
+  background-image: linear-gradient(to right, #525252, transparent 1px),
     linear-gradient(to bottom, #525252, transparent 1px);
   background-size: 45px 45px;
   opacity: 0.2;

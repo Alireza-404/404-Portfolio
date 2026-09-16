@@ -88,8 +88,7 @@
     "howIBuild": {
         "header": {
             "label": "HOW I BUILD",
-            "title": "Good code is only the job.",
-            "titleAccent": "half",
+            "title": "Good code is only <1>half</1> the job.",
             "description": "I care about the space between design and engineering — where thoughtful interfaces, clean architecture and performance come together."
         },
         "principle": {

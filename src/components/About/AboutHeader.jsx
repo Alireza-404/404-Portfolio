@@ -3,6 +3,22 @@ import { useTranslation } from "react-i18next";
 export default function AboutHeader() {
   const { t } = useTranslation();
 
+  const getAge = () => {
+    const birthDate = new Date(2010, 5, 2);
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    const hasHadBirthday =
+      today.getMonth() > birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() &&
+        today.getDate() >= birthDate.getDate());
+
+    if (!hasHadBirthday) age--;
+
+    return age;
+  };
+
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-y-6">
       <div className="flex flex-col gap-y-6">
@@ -12,7 +28,7 @@ export default function AboutHeader() {
         </span>
 
         <h2 className="text-foreground text-5xl lg:text-6xl font-bold flex flex-col">
-          <span>Alireza.</span>
+          <span>{`Alireza.${getAge()}`}</span>
           {t("about.header.title")}
         </h2>
       </div>
