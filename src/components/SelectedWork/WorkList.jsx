@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import worklistArray from "../../data/Worklist";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
@@ -69,13 +68,14 @@ export default function WorkList() {
                 type={"button"}
                 className={"hover:bg-primary/80 h-12 px-6 w-fit text-sm"}
               >
-                <Link
-                  to={work.liveUrl}
+                <a
+                  href={work.liveUrl}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full h-full flex items-center justify-center sm:px-6"
                 >
                   {t("work.project.viewLive")}
-                </Link>
+                </a>
               </PrimaryButton>
             </div>
           </div>

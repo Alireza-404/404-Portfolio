@@ -111,5 +111,20 @@
             "title": "Frontend verbindet Design und Logik.",
             "description": "Mein Schwerpunkt liegt auf dem Frontend – von visuellen Ideen bis hin zu responsiven, barrierearmen und wartbaren Benutzeroberflächen."
         }
+    },
+    "contact": {
+        "header": {
+            "label": "KONTAKT",
+            "title": "Lass uns etwas",
+            "titleAccent": "Großartiges entwickeln.",
+            "description": "Hast du ein Projekt, eine Idee oder eine spannende Möglichkeit? Melde dich gerne – ich freue mich immer über interessante Gespräche."
+        },
+        "content": {
+            "startConversation": "EIN GESPRÄCH STARTEN",
+            "title": "Gute Produkte beginnen mit einem",
+            "titleAccent": "guten Gespräch.",
+            "findOnline": "ONLINE FINDEN",
+            "availability": "Offen für neue Möglichkeiten"
+        }
     }
 }

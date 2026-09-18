@@ -68,9 +68,7 @@ export default function SkillsAndStackContent() {
                     group-hover:bg-primary transition-colors duration-200"
                   ></span>
 
-                  {i18n.language.startsWith("en")
-                    ? item.title_en
-                    : item.title_de}
+                  {item.title}
                 </h3>
 
                 <span

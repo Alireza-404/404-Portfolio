@@ -21,6 +21,7 @@
     "react-icons": "^5.7.0",
     "react-parallax-tilt": "^1.7.342",
     "react-router-dom": "^7.18.3",
+    "react-scroll": "^1.9.3",
     "swiper": "^14.2.0",
     "tailwindcss": "^4.3.3",
     "typewriter-effect": "^2.22.0"

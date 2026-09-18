@@ -28,28 +28,32 @@ export default function AboutContent() {
         <ul className="flex items-center gap-3 flex-wrap">
           <li
             className="text-xs text-secondary px-3 py-1.5 rounded-full border border-white/10
-            hover:text-primary transition-colors duration-200 cursor-default"
+            hover:text-primary hover:bg-primary/5 hover:border-primary/20
+            transition-colors duration-200 cursor-default"
           >
             React
           </li>
 
           <li
             className="text-xs text-secondary px-3 py-1.5 rounded-full border border-white/10
-            hover:text-primary transition-colors duration-200 cursor-default"
+            hover:text-primary hover:bg-primary/5 hover:border-primary/20
+            transition-colors duration-200 cursor-default"
           >
             Next.js
           </li>
 
           <li
             className="text-xs text-secondary px-3 py-1.5 rounded-full border border-white/10
-            hover:text-primary transition-colors duration-200 cursor-default"
+            hover:text-primary hover:bg-primary/5 hover:border-primary/20
+            transition-colors duration-200 cursor-default"
           >
             TypeScript
           </li>
 
           <li
             className="text-xs text-secondary px-3 py-1.5 rounded-full border border-white/10
-            hover:text-primary transition-colors duration-200 cursor-default"
+            hover:text-primary hover:bg-primary/5 hover:border-primary/20
+            transition-colors duration-200 cursor-default"
           >
             {t("about.content.modernFrontend")}
           </li>
@@ -91,7 +95,7 @@ export default function AboutContent() {
 
         <span
           className="absolute text-7xl sm:text-8xl lg:text-9xl text-foreground
-          font-bold opacity-5 top-10 tracking-tighter"
+          font-bold opacity-5 top-10 tracking-tighter select-none"
         >
           {t("about.visual.create")}
         </span>

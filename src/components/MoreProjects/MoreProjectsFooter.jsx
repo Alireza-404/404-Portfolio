@@ -1,14 +1,14 @@
 import { LuArrowRight, LuGithub } from "react-icons/lu";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function MoreProjectsFooter() {
   const { t } = useTranslation();
 
   return (
-    <Link
-      to="https://github.com/Alireza-404"
+    <a
+      href="https://github.com/Alireza-404"
       target="_blank"
+      rel="noopener noreferrer"
       className="group flex items-start gap-x-4 bg-[#111511] p-4 rounded-2xl border border-white/10"
     >
       <span
@@ -43,6 +43,6 @@ export default function MoreProjectsFooter() {
           />
         </span>
       </div>
-    </Link>
+    </a>
   );
 }

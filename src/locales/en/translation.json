@@ -111,5 +111,20 @@
             "title": "Frontend is where design meets logic.",
             "description": "I work mostly on the frontend — turning visual ideas into responsive, accessible and maintainable interfaces."
         }
+    },
+    "contact": {
+        "header": {
+            "label": "CONTACT",
+            "title": "Let's build something",
+            "titleAccent": "great.",
+            "description": "Have a project, an idea, or an opportunity? Feel free to reach out. I'm always open to interesting conversations."
+        },
+        "content": {
+            "startConversation": "START A CONVERSATION",
+            "title": "Good products start with a",
+            "titleAccent": "good conversation.",
+            "findOnline": "FIND ME ONLINE",
+            "availability": "Available for opportunities"
+        }
     }
 }

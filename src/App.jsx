@@ -10,6 +10,7 @@ import MoreProjects from "./components/MoreProjects/MoreProjects";
 import "./App.css";
 import HowIBuild from "./components/HowIBuild/HowIBuild";
 import SkillsAndStack from "./components/SkillsAndStack/SkillsAndStack";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const { i18n } = useTranslation();
@@ -35,6 +36,8 @@ function App() {
         <HowIBuild />
 
         <SkillsAndStack />
+
+        <Contact />
       </main>
     </div>
   );
