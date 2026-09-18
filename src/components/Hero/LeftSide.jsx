@@ -1,14 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
+import { LuArrowRight } from "react-icons/lu";
 
 import Typewriter from "typewriter-effect";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
-import { Link } from "react-router-dom";
 import SecondaryButton from "../SecondaryButton/SecondaryButton";
-import { LuArrowRight } from "react-icons/lu";
 
 export default function LeftSide() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const start = new Date("2023-12-17");
   const now = new Date();
@@ -70,7 +70,9 @@ export default function LeftSide() {
           className={"hover:bg-primary/80 h-14 w-full sm:w-auto"}
         >
           <Link
-            to={"#"}
+            to={"selected-work-section"}
+            smooth={true}
+            duration={700}
             className="w-full h-full flex items-center justify-center sm:px-6"
           >
             {t("common.viewMyWork")}
@@ -84,7 +86,9 @@ export default function LeftSide() {
           }
         >
           <Link
-            to={"#"}
+            to={"contact-section"}
+            smooth={true}
+            duration={700}
             className="w-full h-full flex items-center justify-center gap-x-1 sm:px-6"
           >
             {t("common.letsTalk")}

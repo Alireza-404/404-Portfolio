@@ -1,7 +1,7 @@
 import NavLinks from "../NavLinks/NavLinks";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { LuMenu } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
@@ -56,7 +56,9 @@ export default function Navbar() {
             }
           >
             <Link
-              to={"#"}
+              to={"contact-section"}
+              smooth={true}
+              duration={700}
               className="w-full h-full flex items-center justify-center px-5 py-2.5"
             >
               {t("common.letsTalk")}
