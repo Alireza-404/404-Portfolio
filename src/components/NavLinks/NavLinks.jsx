@@ -27,7 +27,7 @@ export default function NavLinks() {
             after:absolute after:w-[125%] after:bg-foreground
             after:h-px after:left-1/2 after:-translate-x-1/2 cursor-pointer
             after:scale-x-0 hover:after:scale-x-100 after:transition-transform
-            after:duration-200 transition-colors duration-200 after:-bottom-1"
+            after:duration-200 transition-colors duration-200 after:-bottom-1 select-none"
           >
             {t(link.text)}
           </Link>

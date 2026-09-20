@@ -126,5 +126,10 @@
             "findOnline": "ONLINE FINDEN",
             "availability": "Offen für neue Möglichkeiten"
         }
+    },
+    "footer": {
+        "backToTop": "Nach oben",
+        "rights": "Alle Rechte vorbehalten.",
+        "builtWithCare": "Mit Sorgfalt entworfen und entwickelt"
     }
 }

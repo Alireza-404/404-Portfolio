@@ -11,6 +11,7 @@ import SkillsAndStack from "./components/SkillsAndStack/SkillsAndStack";
 import Contact from "./components/Contact/Contact";
 
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -47,6 +48,8 @@ function App() {
         <SkillsAndStack />
 
         <Contact />
+
+        <Footer />
       </main>
     </div>
   );

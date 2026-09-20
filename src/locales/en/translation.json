@@ -126,5 +126,10 @@
             "findOnline": "FIND ME ONLINE",
             "availability": "Available for opportunities"
         }
+    },
+    "footer": {
+        "backToTop": "Back to top",
+        "rights": "All rights reserved.",
+        "builtWithCare": "Designed & built with care"
     }
 }
