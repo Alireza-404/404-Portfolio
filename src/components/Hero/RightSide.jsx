@@ -1,10 +1,30 @@
+import gsap from "gsap";
+import { useLayoutEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function RightSide() {
   const { t, i18n } = useTranslation();
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(containerRef.current, {
+        x: 250,
+        opacity: 0,
+        ease: "power3.out",
+        duration: 0.6,
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="relative z-10 h-fit xl:w-fit xl:mx-auto" dir="ltr">
+    <div
+      ref={containerRef}
+      className="relative z-10 h-fit xl:w-fit xl:mx-auto"
+      dir="ltr"
+    >
       <div
         className={`w-[87%] xl:w-160 mx-auto rounded-3xl border border-white/10 overflow-hidden
           h-82 lg:h-150

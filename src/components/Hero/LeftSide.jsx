@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { LuArrowRight } from "react-icons/lu";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 
 import Typewriter from "typewriter-effect";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
@@ -9,6 +11,7 @@ import SecondaryButton from "../SecondaryButton/SecondaryButton";
 
 export default function LeftSide() {
   const { t } = useTranslation();
+  const containerRef = useRef(null);
 
   const start = new Date("2023-12-17");
   const now = new Date();
@@ -20,14 +23,44 @@ export default function LeftSide() {
 
   const codingYears = `${String(Math.max(1, years)).padStart(2, "0")}+`;
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const tl = gsap.timeline({
+        defaults: { duration: 0.3, ease: "power3.out", opacity: 0 },
+      });
+
+      tl.from(self.selector("#hero-front"), {
+        x: -250,
+      })
+        .from(self.selector("#hero-title"), {
+          x: -250,
+        })
+        .from(self.selector("#hero-description"), {
+          x: -250,
+        })
+        .from(self.selector("#hero-buttons"), {
+          x: -250,
+        })
+        .from(self.selector("#hero-stats"), {
+          x: -250,
+        });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="flex flex-col gap-y-8 relative z-10">
-      <span className="text-secondary tracking-widest flex items-center gap-x-2.5">
+    <div ref={containerRef} className="flex flex-col gap-y-8 relative z-10">
+      <span
+        id="hero-front"
+        className="text-secondary tracking-widest flex items-center gap-x-2.5"
+      >
         <span className="w-9 h-px bg-primary inline-block"></span>
         {t("common.frontendDeveloper")}
       </span>
 
       <h1
+        id="hero-title"
         className="text-foreground font-[800] text-[55px] tracking-wider leading-15 
           sm:text-7xl sm:leading-18 select-none sm:w-140 lg:w-auto xl:text-[80px] xl:leading-24"
       >
@@ -55,6 +88,7 @@ export default function LeftSide() {
       </h1>
 
       <motion.p
+        id="hero-description"
         className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-secondary via-white 
         to-secondary min-[660px]:w-170 lg:w-auto xl:w-150"
         style={{ backgroundSize: "200% 100%" }}
@@ -64,7 +98,7 @@ export default function LeftSide() {
         {t("hero.description")}
       </motion.p>
 
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div id="hero-buttons" className="flex flex-col sm:flex-row gap-4">
         <PrimaryButton
           type={"button"}
           className={"hover:bg-primary/80 h-14 w-full sm:w-auto"}
@@ -100,7 +134,10 @@ export default function LeftSide() {
         </SecondaryButton>
       </div>
 
-      <div className="flex items-center gap-x-5 gap-y-2.5 flex-wrap sm:py-6">
+      <div
+        id="hero-stats"
+        className="flex items-center gap-x-5 gap-y-2.5 flex-wrap sm:py-6"
+      >
         <span className="text-secondary/80 text-sm flex items-center">
           <span className="text-[22px] text-foreground mr-2">
             {codingYears}
