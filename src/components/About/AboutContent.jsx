@@ -1,11 +1,80 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutContent() {
   const { t } = useTranslation();
+  const containerRef = useRef();
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+          defaults: {
+            opacity: 0,
+            ease: "power3.out",
+            y: -200,
+            duration: 0.5,
+          },
+        });
+
+        tl.from(self.selector("#about-box-1"), {
+          x: -250,
+        }).from(
+          self.selector("#about-box-2"),
+          {
+            x: 250,
+          },
+          "<",
+        );
+      });
+
+      mm.add("(max-width: 1023px)", () => {
+        gsap.from(self.selector("#about-box-1"), {
+          scrollTrigger: {
+            trigger: "#about-box-1",
+            start: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+          x: -250,
+          opacity: 0,
+          ease: "power3.out",
+          y: -200,
+          duration: 0.5,
+        });
+
+        gsap.from(self.selector("#about-box-2"), {
+          scrollTrigger: {
+            trigger: "#about-box-2",
+            start: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+          x: 250,
+          opacity: 0,
+          ease: "power3.out",
+          y: -200,
+          duration: 0.5,
+        });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6">
+    <div ref={containerRef} className="flex flex-col lg:flex-row gap-6">
       <div
+        id="about-box-1"
         className="group lg:w-[60%] xl:w-1/2 p-6 border border-white/10 rounded-3xl bg-[#111511]
         flex flex-col lg:justify-around lg:gap-y-0 gap-y-10 hover:border-primary/30 transition-colors duration-200"
       >
@@ -78,6 +147,7 @@ export default function AboutContent() {
       </div>
 
       <div
+        id="about-box-2"
         className="relative lg:w-[40%] xl:w-1/2 p-6 border border-white/10 rounded-3xl bg-[#111511]
         h-96 lg:h-110 overflow-hidden hover:border-primary/30 transition-colors duration-200"
       >
