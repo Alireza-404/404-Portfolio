@@ -1,11 +1,53 @@
 import { LuArrowUpRight } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function ContactContent() {
   const { t } = useTranslation();
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        gsap.from(containerRef.current, {
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+          scale: 0.6,
+          opacity: 0,
+          ease: "power3.out",
+          duration: 0.5,
+        });
+      });
+
+      mm.add("(max-width: 1023px)", () => {
+        gsap.from(containerRef.current, {
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 73%",
+            toggleActions: "play none none reverse",
+          },
+          scale: 0.6,
+          opacity: 0,
+          ease: "power3.out",
+          duration: 0.5,
+        });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row overflow-hidden border border-white/10 rounded-2xl bg-[#111511]">
+    <div
+      ref={containerRef}
+      className="flex flex-col lg:flex-row overflow-hidden border border-white/10 rounded-2xl bg-[#111511]"
+    >
       <div
         className="flex flex-col gap-y-16 border-b border-white/10
         lg:border-b-0 lg:border-r p-6 lg:p-12 lg:w-1/2"
