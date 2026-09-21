@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 
-export default function NavLinks() {
+export default function NavLinks({ onClose }) {
   const { t, i18n } = useTranslation();
 
   const linksArray = [
@@ -23,6 +23,7 @@ export default function NavLinks() {
             smooth={true}
             duration={700}
             to={link.to}
+            onClick={onClose}
             className="relative text-secondary text-base md:text-lg tracking-wider hover:text-foreground
             after:absolute after:w-[125%] after:bg-foreground
             after:h-px after:left-1/2 after:-translate-x-1/2 cursor-pointer

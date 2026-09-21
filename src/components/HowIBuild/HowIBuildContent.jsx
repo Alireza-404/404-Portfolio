@@ -118,6 +118,8 @@ export default function HowIBuildContent() {
           . {t("howIBuild.principle.after")}
         </h3>
 
+        <div className="absolute w-76 h-76 border border-white/5 rounded-full top-2 left-4 z-10"></div>
+
         <div
           className="absolute w-1/3 h-1/3 md:w-70 md:h-50 lg:h-76 lg:w-76 rounded-full
             bg-primary/10 top-2 left-4 blur-2xl z-0"

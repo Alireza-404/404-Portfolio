@@ -38,6 +38,36 @@ function App() {
     ScrollTrigger.refresh(true);
   }, [i18n]);
 
+  useEffect(() => {
+    let timeout;
+
+    const refresh = () => {
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => {
+        requestAnimationFrame(() => {
+          ScrollTrigger.refresh();
+        });
+      }, 100);
+    };
+
+    refresh();
+
+    window.addEventListener("resize", refresh);
+    window.addEventListener("load", refresh);
+    window.addEventListener("orientationchange", refresh);
+    window.visualViewport?.addEventListener("resize", refresh);
+
+    return () => {
+      clearTimeout(timeout);
+
+      window.removeEventListener("resize", refresh);
+      window.removeEventListener("load", refresh);
+      window.removeEventListener("orientationchange", refresh);
+      window.visualViewport?.removeEventListener("resize", refresh);
+    };
+  }, []);
+
   return (
     <div className="w-full min-h-screen overflow-x-hidden bg-[#0b0e0c]">
       <Header />

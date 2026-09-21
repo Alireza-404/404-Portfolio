@@ -1,30 +1,27 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { LuX } from "react-icons/lu";
+import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 import Overlay from "../Overlay/Overlay";
 import NavLinks from "../NavLinks/NavLinks";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 export default function MobileMenu({ isOpen, onClose }) {
   const { t } = useTranslation();
-  const dir = document.documentElement.dir;
 
   return (
     <AnimatePresence initial={false}>
       {isOpen && (
         <>
           <motion.aside
-            initial={{ x: dir === "ltr" ? "-100%" : "100%" }}
+            initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            exit={{ x: dir === "ltr" ? "-100%" : "100%" }}
+            exit={{ x: "-100%" }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className={`fixed inset-y-0 z-30 flex w-80 flex-col
-              overflow-y-auto bg-[#0b0e0c] p-6 md:hidden ${
-                dir === "ltr" ? "left-0" : "right-0"
-              }`}
+            className="fixed inset-y-0 z-30 flex w-80 flex-col
+              overflow-y-auto bg-[#0b0e0c] p-6 md:hidden left-0"
           >
             <div className="flex items-center justify-between border-b border-white/10 pb-6">
               <span className="text-xs font-bold tracking-[0.3em] text-secondary">
@@ -45,7 +42,7 @@ export default function MobileMenu({ isOpen, onClose }) {
             </div>
 
             <div className="flex flex-1 flex-col pt-12">
-              <NavLinks />
+              <NavLinks onClose={onClose} />
 
               <div className="mt-auto pt-12">
                 <PrimaryButton
@@ -53,11 +50,13 @@ export default function MobileMenu({ isOpen, onClose }) {
                   className="w-full hover:-translate-y-1 hover:shadow-[0_4px_24px_#c8f36a4d]"
                 >
                   <Link
-                    to="#"
-                    onClick={onClose}
+                    to={"selected-work-section"}
+                    smooth={true}
+                    duration={700}
                     className="flex py-3 w-full items-center justify-center"
+                    onClick={onClose}
                   >
-                    {t("common.letsTalk")}
+                    {t("common.viewMyWork")}
                   </Link>
                 </PrimaryButton>
               </div>
