@@ -12,8 +12,12 @@ import Contact from "./components/Contact/Contact";
 
 import "./App.css";
 import Footer from "./components/Footer/Footer";
+import { useTranslation } from "react-i18next";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function App() {
+  const { i18n } = useTranslation();
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 2.5,
@@ -29,6 +33,10 @@ function App() {
 
     return () => lenis.destroy();
   }, []);
+
+  useEffect(() => {
+    ScrollTrigger.refresh(true);
+  }, [i18n]);
 
   return (
     <div className="w-full min-h-screen overflow-x-hidden bg-[#0b0e0c]">

@@ -1,11 +1,36 @@
+import gsap from "gsap";
 import { LuArrowRight, LuGithub } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function MoreProjectsFooter() {
   const { t } = useTranslation();
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      gsap.from(containerRef.current, {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "bottom bottom",
+          toggleActions: "play none none reverse",
+        },
+        y: 100,
+        opacity: 0,
+        ease: "power3.out",
+        duration: 0.5,
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <a
+      ref={containerRef}
       href="https://github.com/Alireza-404"
       target="_blank"
       rel="noopener noreferrer"

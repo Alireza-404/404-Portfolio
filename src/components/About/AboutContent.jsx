@@ -23,17 +23,17 @@ export default function AboutContent() {
           defaults: {
             opacity: 0,
             ease: "power3.out",
-            y: -200,
+            y: -100,
             duration: 0.5,
           },
         });
 
         tl.from(self.selector("#about-box-1"), {
-          x: -250,
+          x: -100,
         }).from(
           self.selector("#about-box-2"),
           {
-            x: 250,
+            x: 100,
           },
           "<",
         );
@@ -46,7 +46,7 @@ export default function AboutContent() {
             start: "bottom bottom",
             toggleActions: "play none none reverse",
           },
-          x: -250,
+          x: -100,
           opacity: 0,
           ease: "power3.out",
           y: -200,
@@ -59,10 +59,10 @@ export default function AboutContent() {
             start: "bottom bottom",
             toggleActions: "play none none reverse",
           },
-          x: 250,
+          x: 100,
           opacity: 0,
           ease: "power3.out",
-          y: -200,
+          y: -100,
           duration: 0.5,
         });
       });
