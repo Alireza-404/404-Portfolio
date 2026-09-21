@@ -1,14 +1,108 @@
+import gsap from "gsap";
 import { useTranslation } from "react-i18next";
 import { principlesArray } from "../../data/PrinciplesData";
 import { skillsAndStackArray } from "../../data/SkillsAndStack";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SkillsAndStackContent() {
   const { t, i18n } = useTranslation();
+  const containerRef = useRef(null);
+  const skillsAndStackRef = useRef(null);
+  const principlesRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: skillsAndStackRef.current,
+            start: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+          defaults: { opacity: 0, ease: "power3.out", duration: 0.4 },
+        });
+
+        tl.from(self.selector("#toolkit-box"), {
+          x: -100,
+        }).from(self.selector(".skills-and-stack-box"), {
+          y: -100,
+          stagger: 0.15,
+        });
+
+        gsap.from(self.selector(".principles-box"), {
+          scrollTrigger: {
+            trigger: principlesRef.current,
+            start: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+          y: 100,
+          opacity: 0,
+          ease: "power3.out",
+          duration: 0.4,
+          stagger: 0.15,
+        });
+      });
+
+      mm.add("(max-width: 1023px)", () => {
+        gsap.from(self.selector("#toolkit-box"), {
+          scrollTrigger: {
+            trigger: "#toolkit-box",
+            start: "top 65%",
+            toggleActions: "play none none reverse",
+          },
+          y: -100,
+          opacity: 0,
+          ease: "power3.out",
+          duration: 0.4,
+        });
+
+        gsap.utils
+          .toArray(self.selector(".skills-and-stack-box"))
+          .forEach((box) => {
+            gsap.from(box, {
+              scrollTrigger: {
+                trigger: box,
+                start: "bottom bottom",
+                toggleActions: "play none none reverse",
+              },
+              y: -100,
+              opacity: 0,
+              ease: "power3.out",
+              duration: 0.4,
+            });
+          });
+
+        gsap.utils
+          .toArray(self.selector(".principles-box"))
+          .forEach((principleBox) => {
+            gsap.from(principleBox, {
+              scrollTrigger: {
+                trigger: principleBox,
+                start: "top 80%",
+                toggleActions: "play none none reverse",
+              },
+              y: -100,
+              opacity: 0,
+              ease: "power3.out",
+              duration: 0.4,
+            });
+          });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="flex flex-col gap-y-6">
-      <div className="flex flex-col lg:flex-row gap-6">
+    <div ref={containerRef} className="flex flex-col gap-y-6">
+      <div ref={skillsAndStackRef} className="flex flex-col lg:flex-row gap-6">
         <div
+          id="toolkit-box"
           className="group relative px-6 py-9 bg-[#111511] border border-white/10 rounded-2xl 
             flex flex-col justify-between gap-y-12 overflow-hidden lg:w-[37%]"
         >
@@ -55,7 +149,7 @@ export default function SkillsAndStackContent() {
           {skillsAndStackArray.map((item) => (
             <div
               key={item.id}
-              className="group p-6 bg-[#111511] border border-white/10 rounded-2xl 
+              className="skills-and-stack-box group p-6 bg-[#111511] border border-white/10 rounded-2xl 
                 flex flex-col gap-y-5 hover:border-primary/30 transition-colors duration-200"
             >
               <div className="flex items-center justify-between">
@@ -96,14 +190,17 @@ export default function SkillsAndStackContent() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div
+        ref={principlesRef}
+        className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+      >
         {principlesArray.map((item) => {
           const Icon = item.icon;
 
           return (
             <div
               key={item.id}
-              className="p-6 bg-[#111511] border border-white/10 rounded-2xl flex flex-col 
+              className="principles-box p-6 bg-[#111511] border border-white/10 rounded-2xl flex flex-col 
                 gap-y-6"
             >
               <div className="flex items-center justify-between">

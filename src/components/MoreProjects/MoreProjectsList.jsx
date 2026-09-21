@@ -1,8 +1,9 @@
+import gsap from "gsap";
+import Tilt from "react-parallax-tilt";
+
 import { useLayoutEffect, useRef } from "react";
 import { moreProjectsArray } from "../../data/MoreProjects";
 import { useTranslation } from "react-i18next";
-import Tilt from "react-parallax-tilt";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
