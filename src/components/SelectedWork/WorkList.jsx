@@ -1,22 +1,101 @@
+import gsap from "gsap";
 import { useTranslation } from "react-i18next";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import worklistArray from "../../data/Worklist";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function WorkList() {
   const { i18n, t } = useTranslation();
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        gsap.utils.toArray(self.selector(".work-box")).forEach((box) => {
+          const image = box.querySelector(".work-image");
+          const content = box.querySelector(".work-content");
+
+          const isEven = box.dataset.id % 2 === 0;
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: box,
+              start: "bottom bottom",
+              toggleActions: "play none none reverse",
+            },
+          });
+
+          tl.from(image, {
+            x: isEven ? 250 : -250,
+            opacity: 0,
+            duration: 0.5,
+            ease: "power3.out",
+          }).from(
+            content,
+            {
+              x: isEven ? -250 : 250,
+              opacity: 0,
+              duration: 0.5,
+              ease: "power3.out",
+            },
+            "<",
+          );
+        });
+      });
+
+      mm.add("(max-width: 1023px)", () => {
+        gsap.utils.toArray(self.selector(".work-box")).forEach((box) => {
+          const image = box.querySelector(".work-image");
+          const content = box.querySelector(".work-content");
+
+          gsap.from(self.selector(image), {
+            scrollTrigger: {
+              trigger: image,
+              start: "bottom bottom",
+              toggleActions: "play none none reverse",
+            },
+            x: -250,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 0.5,
+          });
+
+          gsap.from(self.selector(content), {
+            scrollTrigger: {
+              trigger: content,
+              start: "top 70%",
+              toggleActions: "play none none reverse",
+            },
+            x: -250,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 0.5,
+          });
+        });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="flex flex-col gap-y-16">
+    <div ref={containerRef} className="flex flex-col gap-y-16">
       {worklistArray.map((work) => {
         return (
           <div
             key={work.id}
-            className={`flex flex-col lg:gap-x-12 gap-y-8 ${
+            className={`work-box flex flex-col lg:gap-x-12 gap-y-8 ${
               work.id % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
             }`}
           >
             <div
-              className="relative border border-white/10 rounded-2xl overflow-hidden p-2 
+              className="work-image relative border border-white/10 rounded-2xl overflow-hidden p-2 
                 w-full lg:w-1/2 h-fit"
             >
               <img
@@ -35,7 +114,7 @@ export default function WorkList() {
               ></div>
             </div>
 
-            <div className="flex flex-col lg:justify-center gap-y-8 lg:w-1/2">
+            <div className="work-content flex flex-col lg:justify-center gap-y-8 lg:w-1/2">
               <span className="text-neutral-600 text-sm">
                 <span className="text-primary">0{work.id}</span> / 0
                 {worklistArray.length}
