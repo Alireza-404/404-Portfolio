@@ -37,7 +37,7 @@ export default function MoreProjectsList() {
             gsap.from(box, {
               scrollTrigger: {
                 trigger: box,
-                start: "top 75%",
+                start: "top 70%",
                 toggleActions: "play none none reverse",
               },
               y: -100,

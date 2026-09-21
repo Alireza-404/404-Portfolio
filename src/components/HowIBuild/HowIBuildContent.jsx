@@ -1,12 +1,104 @@
+import gsap from "gsap";
 import { useTranslation } from "react-i18next";
 import { HowIBuildDataArray } from "../../data/HowIBuildData";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HowIBuildContent() {
   const { t, i18n } = useTranslation();
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+          defaults: {
+            ease: "power3.out",
+            duration: 0.4,
+            opacity: 0,
+          },
+        });
+
+        tl.from(self.selector("#principle-box"), {
+          x: -100,
+        }).from(self.selector(".how-i-build-boxes"), {
+          y: -100,
+          stagger: 0.15,
+        });
+      });
+
+      mm.add("(min-width: 640px) and (max-width: 1023px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top center",
+            toggleActions: "play none none reverse",
+          },
+          defaults: {
+            ease: "power3.out",
+            duration: 0.4,
+            opacity: 0,
+          },
+        });
+
+        tl.from(self.selector("#principle-box"), {
+          x: -100,
+        }).from(self.selector(".how-i-build-boxes"), {
+          y: -100,
+          stagger: 0.15,
+        });
+      });
+
+      mm.add("(max-width: 639px)", () => {
+        gsap.from(self.selector("#principle-box"), {
+          scrollTrigger: {
+            trigger: "#principle-box",
+            start: "top 65%",
+            toggleActions: "play none none reverse",
+          },
+          x: -100,
+          ease: "power3.out",
+          duration: 0.4,
+          opacity: 0,
+        });
+
+        gsap.utils
+          .toArray(self.selector(".how-i-build-boxes"))
+          .forEach((box) => {
+            gsap.from(box, {
+              scrollTrigger: {
+                trigger: box,
+                start: "top 75%",
+                toggleActions: "play none none reverse",
+              },
+              x: -100,
+              ease: "power3.out",
+              duration: 0.4,
+              opacity: 0,
+            });
+          });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div
+      ref={containerRef}
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
       <div
+        id="principle-box"
         className="group relative px-6 py-9 bg-[#111511] border border-white/10 rounded-2xl
         flex flex-col justify-between gap-y-24 sm:gap-y-38 overflow-hidden sm:col-span-2
         lg:col-span-1 lg:row-span-2"
@@ -43,7 +135,7 @@ export default function HowIBuildContent() {
         return (
           <div
             key={item.id}
-            className="group relative px-6 py-9 bg-[#111511] border border-white/10 rounded-2xl
+            className="how-i-build-boxes group relative px-6 py-9 bg-[#111511] border border-white/10 rounded-2xl
               flex flex-col justify-between gap-y-18 overflow-hidden"
           >
             <div className="flex items-center justify-between">
