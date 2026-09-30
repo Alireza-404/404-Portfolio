@@ -1,5 +1,6 @@
-import NFTImage from "../assets/images/worklist/3.png";
-import MPRWImage from "../assets/images/worklist/4.png";
+import NFTImage from "../assets/images/MoreProjects/1.webp";
+import MPRWImage from "../assets/images/MoreProjects/2.webp";
+import CompressorImage from "../assets/images/MoreProjects/3.webp";
 
 export const moreProjectsArray = [
   {
@@ -33,5 +34,23 @@ export const moreProjectsArray = [
       "Responsive Design",
     ],
     liveUrl: "https://multi-page-react-website-z404z.vercel.app/",
+  },
+  {
+    id: 3,
+    src: CompressorImage,
+    title_en: "404 Compressor — Image Compression Tool",
+    title_de: "404 Compressor — Tool zur Bildkomprimierung",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide React",
+      "Canvas",
+      "Responsive Design",
+      "Web Performance",
+    ],
+    liveUrl: "https://404-compressor.vercel.app",
   },
 ];

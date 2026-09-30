@@ -1,5 +1,5 @@
-import Img1 from "../assets/images/worklist/1.png";
-import Img2 from "../assets/images/worklist/2.png";
+import Img1 from "../assets/images/worklist/1.webp";
+import Img2 from "../assets/images/worklist/2.webp";
 
 const worklistArray = [
   {
