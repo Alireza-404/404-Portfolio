@@ -17,7 +17,7 @@ export default function AboutContent() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "bottom bottom",
+            start: "top 75%",
             toggleActions: "play none none reverse",
           },
           defaults: {

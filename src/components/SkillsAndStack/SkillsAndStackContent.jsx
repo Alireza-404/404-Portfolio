@@ -21,7 +21,7 @@ export default function SkillsAndStackContent() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: skillsAndStackRef.current,
-            start: "bottom bottom",
+            start: "top 75%",
             toggleActions: "play none none reverse",
           },
           defaults: { opacity: 0, ease: "power3.out", duration: 0.4 },

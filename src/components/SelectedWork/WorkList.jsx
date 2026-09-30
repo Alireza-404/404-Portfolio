@@ -26,7 +26,7 @@ export default function WorkList() {
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: box,
-              start: "bottom bottom",
+              start: "top 75%",
               toggleActions: "play none none reverse",
             },
           });

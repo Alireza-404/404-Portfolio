@@ -9,34 +9,16 @@ export default function ContactContent() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 1024px)", () => {
-        gsap.from(containerRef.current, {
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "bottom bottom",
-            toggleActions: "play none none reverse",
-          },
-          scale: 0.6,
-          opacity: 0,
-          ease: "power3.out",
-          duration: 0.5,
-        });
-      });
-
-      mm.add("(max-width: 1023px)", () => {
-        gsap.from(containerRef.current, {
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 73%",
-            toggleActions: "play none none reverse",
-          },
-          scale: 0.6,
-          opacity: 0,
-          ease: "power3.out",
-          duration: 0.5,
-        });
+      gsap.from(containerRef.current, {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+        scale: 0.6,
+        opacity: 0,
+        ease: "power3.out",
+        duration: 0.5,
       });
     }, containerRef);
 
