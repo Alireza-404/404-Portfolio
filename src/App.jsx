@@ -51,20 +51,48 @@ function App() {
       }, 100);
     };
 
+    // Initial layout
     refresh();
 
+    // Fonts
+    document.fonts?.ready.then(refresh);
+
+    // Images
+    const images = Array.from(document.images);
+
+    images.forEach((image) => {
+      if (!image.complete) {
+        image.addEventListener("load", refresh);
+        image.addEventListener("error", refresh);
+      }
+    });
+
+    // Layout / viewport changes
     window.addEventListener("resize", refresh);
-    window.addEventListener("load", refresh);
     window.addEventListener("orientationchange", refresh);
+    window.addEventListener("load", refresh);
+
     window.visualViewport?.addEventListener("resize", refresh);
+
+    // DOM changes
+    const observer = new ResizeObserver(refresh);
+    observer.observe(document.body);
 
     return () => {
       clearTimeout(timeout);
 
       window.removeEventListener("resize", refresh);
-      window.removeEventListener("load", refresh);
       window.removeEventListener("orientationchange", refresh);
+      window.removeEventListener("load", refresh);
+
       window.visualViewport?.removeEventListener("resize", refresh);
+
+      images.forEach((image) => {
+        image.removeEventListener("load", refresh);
+        image.removeEventListener("error", refresh);
+      });
+
+      observer.disconnect();
     };
   }, []);
 
