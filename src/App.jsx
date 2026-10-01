@@ -67,14 +67,14 @@ function App() {
       }
     });
 
-    // Layout / viewport changes
+    // Viewport changes
     window.addEventListener("resize", refresh);
     window.addEventListener("orientationchange", refresh);
     window.addEventListener("load", refresh);
 
     window.visualViewport?.addEventListener("resize", refresh);
 
-    // DOM changes
+    // Element size changes
     const observer = new ResizeObserver(refresh);
     observer.observe(document.body);
 
