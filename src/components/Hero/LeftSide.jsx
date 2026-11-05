@@ -147,7 +147,7 @@ export default function LeftSide() {
         </span>
 
         <span className="text-secondary/80 text-sm flex items-center">
-          <span className="text-[22px] text-foreground mr-2">06+</span>
+          <span className="text-[22px] text-foreground mr-2">10+</span>
 
           {t("hero.stats.projects")}
         </span>
